@@ -12,10 +12,11 @@ jobs:
         with:
           username: erdamca
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          DOCKERHUB_TOKEN=dckr_pat_lcLUht065W6GzEbwTkC75uJVNbs
       -
         name: Build and push
         uses: docker/build-push-action@v5
         with:
           push: true
           tags: user/app:latest
+          secrets: |
+            "DOCKERHUB_TOKEN=dckr_pat_lcLUht065W6GzEbwTkC75uJVNbs"
