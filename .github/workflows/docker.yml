@@ -11,7 +11,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           username: erdamca
-          password: dckr_pat_lcLUht065W6GzEbwTkC75uJVNbs
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          DOCKERHUB_TOKEN=dckr_pat_lcLUht065W6GzEbwTkC75uJVNbs
       -
         name: Build and push
         uses: docker/build-push-action@v5
