@@ -1,15 +1,9 @@
 name: CI Workflow
-
-on:
-  push:
-    branches:
-      - main
-
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
 jobs:
-  build:
-    
+  Explore-GitHub-Actions:
     runs-on: self-hosted
-
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
