@@ -9,23 +9,17 @@ COPY package*.json ./
 
 # Kopieren des Quellcodes in das Arbeitsverzeichnis
 COPY . .
-
-RUN npm install
-
-RUN npm install --global yarn
  
 # Installieren von Abhängigkeiten
-RUN yarn install
- 
-
+RUN npm install
  
 # Linting durchführen
-RUN yarn lint
+RUN npm run lint
  
 # Tests durchführen
-RUN yarn test
+RUN npm run test
  
 # Build durchführen
-RUN yarn build
+RUN npm run build
 
-CMD yarn start
+CMD npm run start
