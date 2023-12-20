@@ -6,7 +6,7 @@ on:
       - main
       - development
     types:
-      - open
+      - opened
       - synchronize
 
 jobs:
