@@ -6,6 +6,10 @@ WORKDIR /app
  
 # Kopieren der package.json und package-lock.json (falls vorhanden)
 COPY package*.json ./
+
+RUN npm install
+
+RUN npm install --global yarn
  
 # Installieren von Abhängigkeiten
 RUN yarn install
