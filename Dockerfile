@@ -7,6 +7,9 @@ WORKDIR /app
 # Kopieren der package.json und package-lock.json (falls vorhanden)
 COPY package*.json ./
 
+# Kopieren des Quellcodes in das Arbeitsverzeichnis
+COPY . .
+
 RUN npm install
 
 RUN npm install --global yarn
@@ -14,8 +17,7 @@ RUN npm install --global yarn
 # Installieren von Abhängigkeiten
 RUN yarn install
  
-# Kopieren des Quellcodes in das Arbeitsverzeichnis
-COPY . .
+
  
 # Linting durchführen
 RUN yarn lint
