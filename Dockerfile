@@ -1,5 +1,5 @@
 # Verwenden eines offiziellen Node.js Basisimages
-FROM node:14
+FROM node:20
 
 # Arbeitsverzeichnis im Container festlegen
 WORKDIR /app
