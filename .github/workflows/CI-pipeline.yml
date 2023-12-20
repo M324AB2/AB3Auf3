@@ -11,7 +11,7 @@ on:
 
 jobs:
   docker:
-    runs-on: self-hosted
+    runs-on: [self-hosted, yusuf]
     steps:
       -
         name: Checkout Repository
