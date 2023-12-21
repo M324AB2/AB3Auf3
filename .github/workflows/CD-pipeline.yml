@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: 'erdamca/simple-type:latest'
+          tags: 'erdamca/simple-type:${{ env.TAG_NAME}}'
 
       - name: Set up Kubectl
         uses: azure/setup-kubectl@v1
@@ -50,6 +50,6 @@ jobs:
 
         env:
           KUBERNETES_NAMESPACE: m324-2
-          IMAGE_TAG: 'erdamca/simple-type:latest'
+          IMAGE_TAG: 'erdamca/simple-type:${{ env.TAG_NAME}}'
           APP_NAME: my-app-khurshid
           BASE_URL: yusuf.m324.hackerman.ch
