@@ -42,13 +42,8 @@ jobs:
             .k8s/01_deployment.yml 
             .k8s/02_service.yml 
             .k8s/03_ingress.yml
-          replacement-method: list
-          env-replacement-list: |
-            KUBERNETES_NAMESPACE 
-            IMAGE_TAG 
-            APP_NAME 
-            APP_NAME 
-            BASE_URL 
+          replacement-method: defined
+          
         env:
           KUBERNETES_NAMESPACE: m324-2
           IMAGE_TAG: 'erdamca/simple-type:latest'

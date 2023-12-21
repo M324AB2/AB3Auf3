@@ -12,7 +12,7 @@ app.get('/', (req: Request, res: Response) => {
   res.send(`<h1>Hello World!</h1><p>Host: ${os.hostname()}</p>`);
 });
 
-app.get('/log/time', (req: Request, res: Response) => {
+app.get('/log/time', (req, res) => {
   const currentTime = new Date().toISOString();
   console.log(`Log Time: ${currentTime}`);
   res.send(`<h1>Current Time Logged</h1><p>${currentTime}</p>`);
